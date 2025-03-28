@@ -6,9 +6,6 @@ int main(){
 
     for(int i = 0; i < 5; i++){
         scanf("%s", data[i]);
-        if(data[i] == NULL){
-            break;
-        }
     }
 
     for(int i = 0; i < 15; i++){
