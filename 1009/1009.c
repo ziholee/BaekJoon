@@ -4,7 +4,6 @@
 int main() {
     int T; //테스트 케이스의 개수
     int a, b; //정수 a, b
-    int total_data = 1;
 
     scanf("%d", &T);
 
