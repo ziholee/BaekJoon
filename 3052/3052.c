@@ -2,27 +2,19 @@
 #include <stdio.h>
 
 int main() {
-    
     int data;
+    int remain[42] = {0};
     int result = 0;
-    int remain[10];
-    
-    for(int i = 0; i < 10; i++) {
+
+    for (int i = 0; i < 10; i++) {
         scanf("%d", &data);
-        remain[i] = (data % 42);
+        remain[data % 42] = 1; // 나머지에 해당하는 인덱스에 표시
     }
-    
-    for(int i = 0; i < 10; i++) {
-        int counter = 0; //0으로 초기화한다.
-        for(int j = i+1; j < 10; j++) { // 서로 같은 수일 경우
-            if(remain[i] == remain[j]) {
-                counter++;
-            }
-        }
-        if (counter == 0) {
-            result++;
+    for (int i = 0; i < 42; i++) {
+        if (remain[i]) {
+            result++; // 사용된 나머지 개수 세기
         }
     }
-    printf("%d", result);
+    printf("%d\n", result);
     return 0;
 }
