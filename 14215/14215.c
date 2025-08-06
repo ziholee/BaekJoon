@@ -24,7 +24,7 @@ int main() {
     // 나머지 두 변의 합
     int other_sum = sum - max;
 
-    // 삼각형 조건을 만족하지 않으면 조정
+    //삼각형 조건을 만족하지 않으면 조정
     if (max >= other_sum) {
         max = other_sum - 1;
     }
