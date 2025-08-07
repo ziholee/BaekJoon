@@ -6,7 +6,7 @@ int main() {
     int K; //찾고자 하는 swap 횟수.
     scanf("%d %d", &N, &K);
 
-    int A[1001]; //입력 배열 (최대 크기 1000)
+    int A[N];
 
     for (int i = 0; i < N; i++) {
         scanf("%d", &A[i]);
