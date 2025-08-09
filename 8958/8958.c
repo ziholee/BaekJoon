@@ -4,13 +4,15 @@
 int main() {
     int T; //테스트 케이스 개수.
     char quiz[81]; //OX 문자열을 저장한다. 공백포함 81.
-    int score = 0; //현재 연속 'O' 점수.
-    int sum = 0; //총 점수 합계.
+    int score; //현재 연속 'O' 점수.
+    int sum; //총 점수 합계.
 
     scanf("%d", &T);
 
     for(int i = 0; i < T; i++) {
         scanf("%s", quiz);
+        score = 0;
+        sum = 0;
         //문자열 끝까지 탐색한다.
         for (int j = 0; quiz[j] != '\0'; j++) {
             if(quiz[j] == 'O') {
